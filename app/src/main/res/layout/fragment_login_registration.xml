@@ -28,19 +28,52 @@
             app:layout_constraintTop_toBottomOf="@+id/logo"
             app:layout_constraintVertical_bias="0.265" />
 
-        <ImageView
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/logo"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/logo"
-            android:contentDescription="@string/logo"
+            android:layout_centerHorizontal="true"
+            android:tint="@color/primaryColor"
+            android:tooltipText="SELECT PHOTO"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#f4f5f9"
+            app:civ_shadow_radius="15"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/baseline_person_black_24dp" />
+
+        <ImageView
+            android:id="@+id/upload_image"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:src="@drawable/ic_photo_camera_black_24dp"
+            android:tint="@color/primaryDarkColor"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.63"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.85"
+            app:srcCompat="@drawable/upload" />
+
+        <!--    <ImageView
+                android:id="@+id/logo"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/logo"
+                android:contentDescription="@string/logo"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />-->
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline4"
@@ -116,9 +149,9 @@
             android:id="@+id/select_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:textColorHighlight="#6D002D"
             android:theme="@style/SwitchTheme"
-            android:layout_gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toStartOf="@+id/Receiver_text"
             app:layout_constraintHorizontal_bias="0.5"
@@ -153,7 +186,7 @@
             android:id="@+id/loginBtn"
             android:layout_width="157dp"
             android:layout_height="34dp"
-            android:background="@drawable/button_round"
+            android:background="@color/primaryDarkColor"
             android:text="LOGIN"
             android:textColor="#ffffff"
             android:textSize="20sp"
@@ -177,6 +210,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.224" />
+
 
 
 

@@ -2,7 +2,8 @@
 <resources>
     <color name="primaryColor">#b63464</color>
     <color name="primaryLightColor">#ec6791</color>
-    <color name="primaryDarkColor">#82003a</color>
+    <color name="primaryDarkColor">#880E4F</color>
     <color name="primaryTextColor">#211A1D</color>
     <color name="nav_item_colors">#ffffff</color>
+    <color name="service_text">#707070</color>
 </resources>

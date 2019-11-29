@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/haanziMain">
 
+   <!-- <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.haanzi.login.signup.HaanziMain"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_haanzi_main" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.androidfirebaselogin.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.androidfirebaselogin.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />-->
+    <fragment
+        android:id="@+id/haanziMain"
+        android:name="com.example.haanzi.login.signup.HaanziMain"
+        android:label="HaanziMain" >
+        <action
+            android:id="@+id/action_haanziMain_to_loginRegistration"
+            app:destination="@id/loginRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginRegistration"
+        android:name="com.example.haanzi.login.signup.LoginRegistration"
+        android:label="LoginRegistration" />
 </navigation>

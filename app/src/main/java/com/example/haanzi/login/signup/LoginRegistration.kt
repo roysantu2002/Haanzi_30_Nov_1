@@ -19,6 +19,7 @@ import com.example.haanzi.databinding.FragmentLoginRegistrationBinding
 class LoginRegistration : Fragment() {
 
     private lateinit var loginViewM : LoginViewModel
+    //private lateinit var mainPage:
     private lateinit var binding: FragmentLoginRegistrationBinding
 
     //Inflating and Returning the View with DataBindingUtil

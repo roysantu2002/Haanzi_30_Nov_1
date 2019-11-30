@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="primaryColor">#b63464</color>
+<!--    <color name="primaryColor">#b63464</color>
     <color name="primaryLightColor">#ec6791</color>
     <color name="primaryDarkColor">#880E4F</color>
     <color name="primaryTextColor">#211A1D</color>
     <color name="nav_item_colors">#ffffff</color>
-    <color name="service_text">#707070</color>
+    <color name="service_text">#707070</color>-->
+
+       <resources>
+        <color name="primaryColor">#005582</color>
+        <color name="primaryLightColor">#0086ad</color>
+        <color name="primaryDarkColor">#00c2c7</color>
+        <color name="accent">#97ebdb</color>
+        <color name="primaryTextColor">#212121</color>
+        <color name="secondary_text">#757575</color>
+        <color name="nav_item_colors">#daf8e3</color>
+        <color name="service_text">#BDBDBD</color>
+    </resources>
+
 
 <!--    <resources>
         <color name="primary">#E91E63</color>
@@ -18,4 +29,3 @@
         <color name="divider">#BDBDBD</color>
     </resources>-->
 
-</resources>

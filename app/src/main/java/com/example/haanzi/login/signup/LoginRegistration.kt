@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -53,14 +54,14 @@ class LoginRegistration : Fragment() {
         loginViewM = ViewModelProviders.of(this).get(LoginViewModel::class.java)
         Log.i("GameViewModel", "loginViewM.tag_txt")
 
-        //val image_view = (binding.uploadImage) as ImageView
+        val image_view = (binding.uploadImage) as ImageView
         //on image click
         //binding.uploadImage
         //binding.logo.se
-        //image_view.setOnClickListener { launchGallery() }
+        image_view.setOnClickListener { launchGallery() }
 
-        //varGlo = VarClass()
-        //common = CommonFunction()
+        varGlo = VarClass()
+        common = CommonFunction()
 
         // btn_upload_image.setOnClickListener { uploadImage() }
 
@@ -88,9 +89,9 @@ class LoginRegistration : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        //varGlo.filePath = data?.data
+        varGlo.filePath = data?.data
 
-        //binding.logo.setImageURI(varGlo.filePath)
+        binding.logo.setImageURI(varGlo.filePath)
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
             val email = "roy@yahoo.com"

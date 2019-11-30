@@ -30,8 +30,8 @@
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/logo"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:tint="@color/primaryColor"
             android:tooltipText="SELECT PHOTO"
@@ -39,7 +39,7 @@
             app:civ_border_width="4dp"
             app:civ_shadow="true"
             app:civ_shadow_color="#f4f5f9"
-            app:civ_shadow_radius="15"
+            app:civ_shadow_radius="10"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -4,14 +4,11 @@ package com.example.haanzi.login.signup
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -34,9 +31,9 @@ class LoginRegistration : Fragment() {
     private lateinit var varGlo: VarClass
     private lateinit var common: CommonFunction
 
-    private  var storage = FirebaseStorage.getInstance()
+    private var storage = FirebaseStorage.getInstance()
 
-   // private lateinit var mFirebaseAuth: FirebaseAuth
+    // private lateinit var mFirebaseAuth: FirebaseAuth
 
     private val mFirebaseAuth = FirebaseAuth.getInstance()
 
@@ -56,14 +53,14 @@ class LoginRegistration : Fragment() {
         loginViewM = ViewModelProviders.of(this).get(LoginViewModel::class.java)
         Log.i("GameViewModel", "loginViewM.tag_txt")
 
-        val image_view = (binding.uploadImage) as ImageView
+        //val image_view = (binding.uploadImage) as ImageView
         //on image click
         //binding.uploadImage
         //binding.logo.se
-        image_view.setOnClickListener { launchGallery() }
+        //image_view.setOnClickListener { launchGallery() }
 
-        varGlo = VarClass()
-        common = CommonFunction()
+        //varGlo = VarClass()
+        //common = CommonFunction()
 
         // btn_upload_image.setOnClickListener { uploadImage() }
 
@@ -75,6 +72,7 @@ class LoginRegistration : Fragment() {
         return binding.root
 
     }
+
 
     private fun launchGallery() {
         Log.d(TAG, "Camera")
@@ -90,14 +88,17 @@ class LoginRegistration : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        //varGlo.filePath = data?.data
+
+        //binding.logo.setImageURI(varGlo.filePath)
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
             val email = "roy@yahoo.com"
             val password = "karimganj19"
 
             mFirebaseAuth!!.signInWithEmailAndPassword(
-                email.toString()!!,
-                password.toString()!!
+                email!!,
+                password!!
             )
                 .addOnCompleteListener { task ->
 
@@ -108,7 +109,7 @@ class LoginRegistration : Fragment() {
 
                             varGlo.filePath = data?.data
 
-                            binding.logo.setImageURI(varGlo.filePath)
+                           // binding.logo.setImageURI(varGlo.filePath)
 
                             common.uploadImgToFirebase(varGlo.filePath, storage)
 

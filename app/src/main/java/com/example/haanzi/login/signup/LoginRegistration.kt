@@ -94,7 +94,7 @@ class LoginRegistration : Fragment() {
         binding.logo.setImageURI(varGlo.filePath)
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
-            val email = "roy@yahoo.com"
+            val email = "test_333@yahoo.com"
             val password = "karimganj19"
 
             mFirebaseAuth!!.signInWithEmailAndPassword(

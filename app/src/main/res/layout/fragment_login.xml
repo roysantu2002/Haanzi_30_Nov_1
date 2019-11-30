@@ -28,14 +28,11 @@
             app:layout_constraintTop_toBottomOf="@+id/logo"
             app:layout_constraintVertical_bias="0.265" />
 
-        <com.mikhaellopez.circularimageview.CircularImageView
+        <ImageView
             android:id="@+id/logo"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            android:tint="@color/primaryColor"
-            android:tooltipText="SELECT PHOTO"
-            app:civ_border_color="#EEEEEE"
             app:civ_border_width="4dp"
             app:civ_shadow="true"
             app:civ_shadow_color="#f4f5f9"
@@ -45,34 +42,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/baseline_person_black_24dp" />
+            app:srcCompat="@drawable/logo">
+        </ImageView>
 
-        <ImageView
-            android:id="@+id/upload_image"
-            android:layout_width="29dp"
-            android:layout_height="29dp"
-            app:srcCompat="@drawable/ic_photo_camera_black_24dp"
-            android:tint="@color/primaryDarkColor"
-            app:layout_constraintBottom_toTopOf="@+id/guideline5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.63"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline4"
-            app:layout_constraintVertical_bias="0.85" />
-
-        <!--    <ImageView
-                android:id="@+id/logo"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/logo"
-                android:contentDescription="@string/logo"
-                app:layout_constraintBottom_toTopOf="@+id/guideline5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />-->
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline4"
@@ -144,56 +116,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_edit" />
 
-        <Switch
-            android:id="@+id/select_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColorHighlight="#6D002D"
-            android:theme="@style/SwitchTheme"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
-            app:layout_constraintEnd_toStartOf="@+id/Receiver_text"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/provider_text"
-            app:layout_constraintTop_toTopOf="@+id/guideline6"
-            app:layout_constraintVertical_bias="0.352" />
-
-        <TextView
-            android:id="@+id/Receiver_text"
-            style="@style/textLabel"
-            android:layout_marginEnd="18dp"
-            android:text="Receiver"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/select_switch"
-            app:layout_constraintTop_toTopOf="@+id/guideline6"
-            app:layout_constraintVertical_bias="0.361" />
-
-        <TextView
-            android:id="@+id/provider_text"
-            style="@style/textLabel"
-            android:layout_marginStart="18dp"
-            android:text="Provider"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
-            app:layout_constraintEnd_toStartOf="@+id/select_switch"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline6"
-            app:layout_constraintVertical_bias="0.364" />
 
         <Button
             android:id="@+id/loginBtn"
             android:layout_width="157dp"
             android:layout_height="34dp"
+            android:layout_marginBottom="60dp"
             android:background="@color/primaryDarkColor"
-            android:text="SIGN UP"
+            android:text="LOGIN"
             android:textColor="#ffffff"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/select_switch"
-            app:layout_constraintVertical_bias="0.68" />
+            app:layout_constraintTop_toBottomOf="@+id/password_edit"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/login_signup"
@@ -203,14 +141,29 @@
             android:layout_marginBottom="128dp"
             android:background="@null"
             android:padding="@null"
-            android:text="OR LOGIN"
+            android:text="OR SIGN UP"
             android:textColor="#00227b"
             app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.224" />
+            app:layout_constraintVertical_bias="0.224"
+            android:fontFamily="@font/roboto_bold"/>
 
-
+        <Button
+            android:id="@+id/forgot_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Forgot password?"
+            android:textColorHighlight="@color/primaryDarkColor"
+            android:textColor="@color/highlightText"
+            app:layout_constraintBottom_toTopOf="@+id/login_signup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+            app:layout_constraintVertical_bias="0.758" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

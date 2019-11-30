@@ -32,8 +32,13 @@ class HaanziMain : Fragment() {
         }*/
 
         //The complete onClickListener with Navigation using createNavigateOnClickListener
-        binding.loginBtn.setOnClickListener(
+        //Sign Up
+        binding.signupBtn.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_haanziMain_to_loginRegistration))
+
+        //Login
+        binding.loginBtn.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_haanziMain_to_login))
 
 
         return binding.root
